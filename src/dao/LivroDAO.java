@@ -25,6 +25,7 @@ public class LivroDAO {
         }
     }
     
+    //listagem de livros associada ao nome do autor e da sua categoria
     public List<Livro> listar() {
         List<Livro> livros = new ArrayList<>();
         String sql = "SELECT * FROM Livros";

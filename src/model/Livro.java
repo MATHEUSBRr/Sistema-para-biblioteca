@@ -1,5 +1,6 @@
 package model;
 
+//criação da classe livro, recebendo autor e categoria
 public class Livro {
     private int id;
     private String titulo;

@@ -26,11 +26,12 @@ public class Main extends JFrame {
 
     public Main() {
         setTitle("Sistema de Biblioteca");
-        setSize(900, 600);
+        setSize(900, 600); //tamanho da interface
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
+        //botões
         btnAdicionarAutor = new JButton("Adicionar Autor");
         btnAdicionarCategoria = new JButton("Adicionar Categoria");
         btnAdicionarLivro = new JButton("Adicionar Livro");
@@ -41,11 +42,12 @@ public class Main extends JFrame {
         btnListarEmprestimos = new JButton("Listar Empréstimos");
         btnRegistrarDevolucao = new JButton("Registrar Devolução"); // Novo botão
 
+        //adicionar textarea
         textArea = new JTextArea();
         textArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(textArea);
 
-        JPanel panelButtons = new JPanel(new GridLayout(4, 5, 10, 10)); 
+        JPanel panelButtons = new JPanel(new GridLayout(4, 5, 10, 10)); //arrumar as colunas onde ficam os botões
         panelButtons.add(btnAdicionarAutor);
         panelButtons.add(btnAdicionarCategoria);
         panelButtons.add(btnAdicionarLivro);
@@ -59,6 +61,7 @@ public class Main extends JFrame {
         add(panelButtons, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
 
+        //ações
         btnAdicionarAutor.addActionListener(e -> adicionarAutor());
         btnAdicionarCategoria.addActionListener(e -> adicionarCategoria());
         btnAdicionarLivro.addActionListener(e -> adicionarLivro());
@@ -156,6 +159,7 @@ public class Main extends JFrame {
         }
     }
 
+    //registrar devolução inserindo ano mes e dia
    private void registrarDevolucao() {
     try {
         String idEmprestimoStr = JOptionPane.showInputDialog(this, "Digite o ID do empréstimo:");

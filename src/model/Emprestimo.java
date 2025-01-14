@@ -2,6 +2,7 @@ package model;
 
 import java.util.Date;
 
+//criação da classe empréstimo
 public class Emprestimo {
     private int id;
     private Livro livro;

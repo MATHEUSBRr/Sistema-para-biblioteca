@@ -1,5 +1,6 @@
 package model;
 
+//criação da classe autor
 public class Autor {
     private int id;
     private String nome;

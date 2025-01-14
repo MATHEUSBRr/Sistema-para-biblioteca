@@ -1,5 +1,6 @@
 package model;
 
+//criação da classe categoria
 public class Categoria {
     private int id;
     private String descricao;
